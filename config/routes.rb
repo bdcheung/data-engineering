@@ -1,11 +1,6 @@
 DataEngineering::Application.routes.draw do
-  resources :orders
-
-  resources :merchants
-
-  resources :products
-
-  resources :users
+  root 'orders#index'
+  resources :imports, only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20130521232945) do
 
   create_table "orders", force: true do |t|
     t.integer  "user_id"
+    t.integer  "merchant_id"
     t.integer  "product_id"
     t.integer  "quantity"
     t.decimal  "total_cost"
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20130521232945) do
     t.datetime "updated_at"
   end
 
+  add_index "orders", ["merchant_id"], name: "index_orders_on_merchant_id"
   add_index "orders", ["product_id"], name: "index_orders_on_product_id"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 

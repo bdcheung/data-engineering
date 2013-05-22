@@ -1,0 +1,43 @@
+<h1>Orders</h1>
+
+<table>
+	<tr>
+		<th>Purchaser Name</th>
+		<th>Item Descrption</th>
+		<th>Item Price</th>
+		<th>Purchase Count</th>
+		<th>Total Purchase</th>
+		<th>Merchant Address</th>
+		<th>Merchant Name</th>
+	</tr>
+	<% @orders.each do |i| %>
+	<tr>
+		<td>
+			<%= i.user.name %>
+		</td>
+		<td>
+			<%= i.product.description %>
+		</td>
+		<td>
+			<%= i.product.price %>
+		</td>
+		<td>
+			<%= i.quantity %>
+		</td>
+		<td>
+			<%= i.total_cost %>
+		</td>
+		<td>
+			Coming soon
+		</td>
+		<td>
+			Coming soon
+		</td>
+	</tr>
+	<% end %>
+</table>
+<h2>Import orders</h2>
+<%= form_tag(imports_path, id: 'import', multipart: true) do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Import" %>
+<% end %>

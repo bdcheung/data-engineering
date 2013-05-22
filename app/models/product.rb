@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+	belongs_to :merchants
 	has_many :orders
-	attr_accessible :product_name, :price
+	has_many :users, :through => :orders
+	attr_accessible :description, :price
 end
