@@ -19,13 +19,13 @@
 			<%= i.product.description %>
 		</td>
 		<td>
-			<%= i.product.price %>
+			<%= number_to_currency(i.product.price) %>
 		</td>
 		<td>
 			<%= i.quantity %>
 		</td>
 		<td>
-			<%= i.total_revenue %>
+			<%= number_to_currency(i.total_revenue) %>
 		</td>
 		<td>
 			<%= i.merchant.address %>

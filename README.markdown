@@ -1,22 +1,4 @@
-# Challenge for Software Engineer - Big Data 
-To better assess a candidates development skills, we would like to provide the following challenge.  You have as much time as you'd like (though we ask that you not spend more than a few hours).
-
-There are three jobs that both use this challenge:
-
-1. Senior Software Engineer: If you are applying to this position, the email address you should use for submission is [dev.challenges@livingsocial.com](dev.challenges@livingsocial.com).  You must use either Ruby/Ruby on Rails or Scala/Play2.0.
-1. Senior Software Engineer, Big Data (and/or Data Scientist): If you are applying to this position, the email address you should use for submission is [data.challenge@livingsocial.com](mailto:data.challenge@livingsocial.com).  You may use any programming language or framework you'd like.
-
-Feel free to email the appropriate address above if you have any questions.
-
-## Submission Instructions
-1. First, fork this project on github.  You will need to create an account if you don't already have one.
-1. Next, complete the project as described below within your fork.
-1. Finally, push all of your changes to your fork on github and submit a pull request.  You should also email the appropriate address listed in the first section and your recruiter to let them know you have submitted a solution.  Make sure to include your github username in your email (so we can match people with pull requests).
-
-## Alternate Submission Instructions (if you don't want to publicize completing the challenge)
-1. Clone the repository
-1. Next, complete your project as described below within your local repository
-1. Email a patch file to the appropriate address listed above ([data.challenge@livingsocial.com](mailto:data.challenge@livingsocial.com) if you are applying for the Big Data position, [dev.challenges@livingsocial.com](dev.challenges@livingsocial.com) if you are applying for the general Senior Software Engineer or Associate Developer position).
+# Challenge for Software Engineer - Completed by Brian Cheung
 
 ## Project Description
 Imagine that LivingSocial has just acquired a new company.  Unfortunately, the company has never stored their data in a database and instead uses a plain text file.  We need to create a way for the new subsidiary to import their data into a database.  Your task is to create a web interface that accepts file uploads, normalizes the data, and then stores it in a relational database.
@@ -35,9 +17,29 @@ Your application does not need to:
 
 Your application should be easy to set up and should run on either Linux or Mac OS X.  It should not require any for-pay software.
 
-## Evaluation
-Evaluation of your submission will be based on the following criteria. Additionally, reviewers will attempt to assess your familiarity with standard libraries. If your code submission is in Ruby, reviewers will attempt to assess your experience with object-oriented programming based on how you've structured your submission.
+## How to Use This App
+This application is built on Ruby 2.0.0p0 and Rails 4.0.0rc1.  To use this app, download and install both Ruby and Rails (installation instructions can be found at https://coderwall.com/p/tptocq and   http://railsapps.github.io/installing-rails.html).
 
-1. Did your application fulfill the basic requirements?
-1. Did you document the method for setting up and running your application?
-1. Did you follow the instructions for submission?
+Then, to install the application, open a command prompt and:
+
+1. Clone the repository from GitHub ([need help?](https://help.github.com/articles/set-up-git))
+```
+$ git clone https://github.com/bdcheung/data-engineering.git
+```
+
+1. Switch into the directory and run the bundler to install required dependencies
+```
+$ bundle install
+```
+
+1. Generate the database
+```
+$ rake db:migrate
+```
+
+1. Start the Rails server
+```
+$ rails s
+```
+
+1. Open the app in your favorite browser and visit http://localhost:3000
