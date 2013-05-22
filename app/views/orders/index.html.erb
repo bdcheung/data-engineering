@@ -25,17 +25,18 @@
 			<%= i.quantity %>
 		</td>
 		<td>
-			<%= i.total_cost %>
+			<%= i.total_revenue %>
 		</td>
 		<td>
-			Coming soon
+			<%= i.merchant.address %>
 		</td>
 		<td>
-			Coming soon
+			<%= i.merchant.name %>
 		</td>
 	</tr>
 	<% end %>
 </table>
+<h2>Total Revenue: <%= number_to_currency(Upload.gross_revenue) %></h2>
 <h2>Import orders</h2>
 <%= form_tag(imports_path, id: 'import', multipart: true) do %>
 	<%= file_field_tag :file %>
